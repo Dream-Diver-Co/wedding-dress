@@ -1,11 +1,12 @@
 import React from 'react';
 import HeroSection from './HeroSection';
 import Reels from './Section/Reels';
+import Navbar from './Shared/Navbar';
 
 const Homepage = () => {
     return (
         <div className=''>
-            <h1 className='text-red-700 font-extrabold text-center'>hello</h1>
+            <Navbar></Navbar>
             <HeroSection></HeroSection>
             <Reels></Reels>
         </div>
