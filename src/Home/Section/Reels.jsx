@@ -1,5 +1,4 @@
 // src/components/Reels.jsx
-
 import React, { useRef, useState } from 'react';
 import a from "../../assets/hero.mp4";
 
@@ -44,13 +43,13 @@ const Reels = () => {
   const videosToDisplay = reelsData.slice(currentRow * videosPerRow, (currentRow + 1) * videosPerRow);
 
   return (
-    <div className="">
-        <h1 className='font-light text-5xl text-center italic '>Reels Videos</h1>
-        <div className="relative w-full overflow-hidden top-8">
+    <section className="relative py-16 px-4 bg-gray-200 mt-8">
+      <h1 className='font-light text-5xl text-center italic mb-8'>Reels Videos</h1>
+      <div className="relative w-full overflow-hidden">
         {currentRow > 0 && (
             <button
             onClick={handlePrevRow}
-            className="absolute left-4 bottom-3/4 transform -translate-y-1/2  bg-red-500 text-white p-3 rounded-full z-10"
+            className="absolute left-4 bottom-3/4 transform -translate-y-1/2 bg-red-500 text-white p-3 rounded-full z-10"
             >
             &lt;
             </button>
@@ -58,10 +57,10 @@ const Reels = () => {
 
         <div
             ref={videoContainerRef}
-            className=" relative flex overflow-x-auto scroll-smooth  justify-center items-center"
+            className="relative flex overflow-x-auto scroll-smooth justify-center items-center"
         >
             {videosToDisplay.map((reel) => (
-            <div key={reel.id} className="relative w-60 h-80  bg-white shadow-lg rounded-none overflow-hidden flex-shrink-0">
+            <div key={reel.id} className="relative w-60 h-80 bg-white shadow-lg rounded-none overflow-hidden flex-shrink-0">
                 <video
                 src={reel.videoUrl}
                 className="w-full h-full object-cover"
@@ -84,8 +83,8 @@ const Reels = () => {
             &gt;
             </button>
         )}
-        </div>
-    </div>
+      </div>
+    </section>
   );
 };
 
