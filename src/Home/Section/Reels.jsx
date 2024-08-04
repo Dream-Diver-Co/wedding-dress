@@ -1,16 +1,18 @@
 // src/components/Reels.jsx
 import React, { useRef, useState } from 'react';
 import a from "../../assets/hero.mp4";
+import b from "../../assets/h.mp4";
+import c from "../../assets/hero1.mp4";
 
 // Sample data for reels with video URLs
 const reelsData = [
-  { id: 1, videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'},
+  { id: 1, videoUrl: b},
   { id: 2, videoUrl: a},
-  { id: 3, videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'},
+  { id: 3, videoUrl: c},
   { id: 4, videoUrl: a},
-  { id: 5, videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'},
+  { id: 5, videoUrl: b},
   { id: 6, videoUrl: a},
-  { id: 7, videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'},
+  { id: 7, videoUrl: c},
   // Add more videos as needed
 ];
 
@@ -49,7 +51,7 @@ const Reels = () => {
         {currentRow > 0 && (
             <button
             onClick={handlePrevRow}
-            className="absolute left-4 bottom-3/4 transform -translate-y-1/2 bg-red-500 text-white p-3 rounded-full z-10"
+            className="absolute left-4 bottom-3/4 transform -translate-y-1/2 bg-red-900 text-white p-3 rounded-full z-10"
             >
             &lt;
             </button>
@@ -78,7 +80,7 @@ const Reels = () => {
         {currentRow < maxRows - 1 && (
             <button
             onClick={handleNextRow}
-            className="absolute right-4 bottom-3/4 transform -translate-y-1/2 bg-red-500 text-white p-3 rounded-full z-10"
+            className="absolute right-4 bottom-3/4 transform -translate-y-1/2 bg-red-900 text-white p-3 rounded-full z-10"
             >
             &gt;
             </button>
